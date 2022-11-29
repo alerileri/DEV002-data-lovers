@@ -4,9 +4,9 @@ Documenta brevemente tu trabajo en el archivo README.md de tu repositorio, cont�
 Pokémon GO es un video juego de realidad aumentada para teléfonos móviles badado en la saga Pokémon. Las jugadoras y jugadores son entrenadores cuyo objetivo es capturar pokémon para usos distintos: coleccionarlos, usarlos para enfrentarse al Team Go Rocket, batallar en torneos y copas, obtener desafíos de colección, obtener caramelos para evolución o energía para megaevolución, etc.
 Jhoale Pokédex es una web que contiene información sobre los pokémon de las regiones de Kanto y Jhoto dentro del juego Pokémon Go, información que filtra con diferentes funciones de manera que sea útil, identificable y digerible para las jugadoras y jugadores. Los filtros fueron diseñados para que usuarias y usuarios puedan tomar mejores decisiones en el juego, lo que les permitirá subir de nivel y conseguir diferentes objetivos mientras se divierten en el mundo real.
 Para ello, concluimos la necesidad de integrar los siguientes filtros básicos:
--Filtro por nombre de pokémon
--Filtro por tipos
--Filtro de pokémon legendarios
+* Filtro por nombre de pokémon
+* Filtro por tipos
+* Filtro de pokémon legendarios
 
 El uso de ellos se definió más ampliamente en las historias de usuario.
 
