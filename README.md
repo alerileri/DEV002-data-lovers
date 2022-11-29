@@ -6,21 +6,21 @@ Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
 
 Para entender mejor qué necesidades complementarias a la app tienen los
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU001.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU001.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU005.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU005.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU006.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU006.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU007.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU007.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU008.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU008.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU009.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU009.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU010.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU010.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU011.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU011.jpeg)
 
 
 ## Diseño de Interfaz de usuario
@@ -30,15 +30,15 @@ Agregar prototipo de alta en figma (enlace, capturas)
 - **Prototipo de baja fidelidad** 
 Durante tu trabajo deberás haber hecho e iterado bocetos (sketches) de tu solución usando papel y lápiz. Te recomendamos tomar fotos de todas las iteraciones que hagas, que las subas a tu repositorio y las menciones en tu README.md  
 
- ![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-1.jpeg
+ ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-1.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-2.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-2.jpeg)
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-3.jpeg
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/Prot-BN-papel-3.jpeg)
 
 
 
-![Image text]https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png)
 
 
 - **Prototipo de alta fidelidad** distintos Pokémon para completar su Pokédex.
