@@ -1,8 +1,8 @@
+
 *,
 ::after,
 ::before {
   box-sizing: border-box; }
-
 /*
 ===============
 Global Styles
@@ -12,34 +12,23 @@ Global Styles
   margin: 0; /*espacios entre mi contenedor y el padre (hacia afuera). Solo puede haber un contenedor padre(listado-pokemones) */
   padding: 0; /*espacios entre mi contenedor y los hijos (hacia adentro). Pueden haber varios hijos(pokemon-item)*/
   box-sizing: border-box; }
-
-  
 header{
-
    text-align: center;
     width: 100%;
     height: auto;
     margin: 2rem !important;/*con esto le digo que es mas importante que las otras(en este caso margin)*/
 }
-header .titulo{ /*lo mismo sería escribir solo h1*/
-  color: #efb810;
-}
-
 header .logo{
-    width: 80%;
+    width: 40%;  /*lo modifiqué de 80 a 40% porque estaba muy grande*/
     height: auto;
     object-fit: fixed; /*adapta la imagen a mi contenedor*/
 }
-
-
 body {
-
     font-family: 'Poppins', sans-serif;
     color: #5A6170;
     line-height: 1.5;
     font-size: 0.875rem;
-
-    background-color: #dadfea;
+    background-color: #DADFEA;
    /* background-image: url('img/fondo.png');*/
     background-position: center center;
     /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
@@ -49,23 +38,18 @@ body {
     /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
     background-size: cover;
     /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador(RESPONSIVE) */
-
 }
-
 #container-pokemones{
 text-align: center;
 }
-
 #container-pokemones .search-Pokemon{
 border: 4px solid cornflowerblue;
 border-radius: 4px;
 padding: 0.5rem 1.5rem; /*estoy poniendo 1.5 de forma horizontal y 0.5 vertical*/
 }
-
 #container-pokemones .search-Pokemon:focus {
 outline: none;
 }
-
 #listado-pokemones{
    /* background-color: aquamarine;*/
     padding: 2rem;/*espaciado entre el padre y los hijos*/
@@ -73,10 +57,52 @@ outline: none;
     grid-template-columns: 1fr 1fr 1fr; /*para separar en 3 columnas al listado*/
     gap: 2rem;/*el gap separa los hijos (1 rem=16px)*/
 }
-
 #listado-pokemones .pokemon-item{
     background-color: white;
     padding: 2rem;
     text-align: center;
 }
-
+.modal {
+  display: none; /* Hidden by default */
+  background: rgba(0, 0, 0, 0.4);
+  width: 100vw; /* Full width */
+  height: 100vh;  /* Full height */
+  top: 0;
+  left: 0;
+  position: fixed;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.modal-container {   /* Modal Content */
+ /* background-image: url('img/fondo.png');*/
+  background: #F3A8A8;
+  /*background: #fff;*/
+  min-width: 960px;
+  max-width: 98%;
+  min-height: 616px;
+  max-height: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.close-modal {
+  background: red;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 50%;
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  cursor: pointer;
+}
