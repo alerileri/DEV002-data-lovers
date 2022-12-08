@@ -6,14 +6,21 @@ sortData(data, sortBy, sortOrder): esta función sort u ordenar recibe tres par�
  indica si se quiere ordenar de manera ascendente o descendente.
 computeStats(data): la función compute o calcular, nos permitirá hacer cálculos estadísticos básicos para ser mostrados de acuerdo a la
  data proporcionada.*/
-  export const buscarPorInput = (e, data) => {
-   return data.filter(pokemon => pokemon.name.includes(e));
-}
 
-export const buscarPorTipo=(e,data)=>{
+/**
+ * TODO: JSDOC
+ * @param {*} e 
+ * @param {*} data 
+ * @returns 
+ */
+export const buscarPorInput = (e, data) => {
+  return data.filter(pokemon => pokemon.name.includes(e));
+};
+
+export const buscarPorTipo = (e, data) => {
   return data.filter(pokemon => pokemon.type.includes(e));
 };
 
-export const filterPokemonByNumber= (numPokemon,data) =>{
-  return data.filter(pokemon => pokemon.num==numPokemon);
-}
+export const filterPokemonByNumber = (numPokemon, data) => {
+  return data.filter(pokemon => pokemon.num == numPokemon);
+};

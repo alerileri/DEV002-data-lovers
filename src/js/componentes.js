@@ -2,6 +2,7 @@ import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
 import { filterPokemonByNumber } from "../data.js";
 
+const modalAdd = document.querySelector("#modalAdd");
 
 export const visualizarPokemones = (arrayPokemones) => {    //esta función limpia al padre(listado-pokemones) y renderiza los componentes hijos(pokemon-item)
   const listadoPokemones = document.getElementById('listado-pokemones')
@@ -21,8 +22,8 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
   // console.log(htmlContainerPokemones);
  /*listadoPokemones.innerHTML = htmlContainerPokemones variable que incrusta el listado de pokemones*/
  listadoPokemones.append(...htmlContainerPokemon) /*Operador spread son los ... y funciona para "esparcir" el array sin tener que escribir cada uno de sus elementos*/
-};// el método append le está agregando a listadoPokemones elementos hijos que s
-//on todos los elementos del array de htmlContainerPokemon
+};// el método append le está agregando a listadoPokemones elementos hijos, que 
+//son todos los elementos del array de htmlContainerPokemon
 
 
 
