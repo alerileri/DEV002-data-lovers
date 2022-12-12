@@ -37,9 +37,10 @@ body {
   color: #5A6170;
   line-height: 1.5;
   font-size: 0.875rem;
+  text-align: center;
   background-color: #DADFEA;
   /* background-image: url('img/fondo.png');*/
-  background-position: center center;
+  background-position: center;
   /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
   background-repeat: no-repeat;
   /* Para que la imagen de fondo no se repita */
@@ -78,8 +79,23 @@ body {
 
 #listado-pokemones .pokemon-item {
   background-color: white;
-  padding: 2rem;
+  border-radius: 10%;
+  padding: 1rem;
   text-align: center;
+}
+
+.search-Pokemon {
+  text-align: left;
+  font-family:'Poppins light', sans-serif;
+}
+
+.search-Pokemon:focus {
+  border: 3px solid #F8A4D8;
+}
+
+#select-tipos {
+  text-align: left;
+  font-family:'Poppins light', sans-serif;
 }
 
 .modal {
@@ -105,8 +121,10 @@ body {
 
   background: rgb(238, 174, 202);
   background: linear-gradient(294deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  min-height: 616px;
-  max-height: 90%;
+  max-height: 600px;
+  max-height: 650px;
+  width: 90%;
+  height: 95%;
   padding: 20px;
   border-radius: 15px;
   position: relative;
@@ -114,6 +132,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 20px;
 }
 
 .close-modal {
