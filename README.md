@@ -51,6 +51,7 @@ A partir de estos bocetos solicitamos feedback a compañeras y coaches, con lo q
 
 - **Prototipo de alta fidelidad** 
 
+https://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?node-id=0%3A1
 
 
 - **Objetivo de la interfaz** 
