@@ -51,6 +51,13 @@ A partir de estos bocetos solicitamos feedback a compañeras y coaches, con lo q
 
 - **Prototipo de alta fidelidad** 
 
+Después de iterar nuestro prototipo de baja calidad en diferentes formatos, dimos el siguiente paso y definimos un diseño de alta fidelidad en figma. El resultado fue el que se muestra en las siguientes imágenes:
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PrototipoAltaCalidad1.png)
+![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PrototipoAltaCalidad-2.png)
+
+Nuestro prototipo final modifica un poco la estructura de los prototipos anteriores para adaptarse mejor a nuestras historias de usuario. En cuanto al diseño, definimos la paleta de colores que utilizaríamos e incluimos un logo en el header para darle identidad a nuestra página. Utilizamos también un degradado basado en la paleta original para dar un efecto distinto a las ventanas modales. 
+
+La herramienta principal que utilizamos fue figma, y el prototipo completo puede observarse en el siguiente enlace:
 https://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?node-id=0%3A1
 
 
