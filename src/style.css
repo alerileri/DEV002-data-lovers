@@ -18,15 +18,14 @@ Global Styles
 }
 
 header {
-  text-align: center;
   width: 100%;
   height: auto;
-  margin: 2rem !important;
-  /*con esto le digo que es mas importante que las otras(en este caso margin)*/
+  margin: 0 0 2rem 0;
+  align-items: center;
 }
 
-header .logo {
-  width: 60%;
+.logo {
+  max-width: 90%;
   height: auto;
   object-fit: fixed;
   /*adapta la imagen a mi contenedor*/
@@ -35,103 +34,98 @@ header .logo {
 body {
   font-family: 'Poppins', sans-serif;
   color: #5A6170;
-  line-height: 1.5;
-  font-size: 0.875rem;
+  line-height: 1;
+  font-size: 0.75rem;
   text-align: center;
+  margin: .5rem;
+  padding: 1.5rem;
   background-color: #DADFEA;
-  /* background-image: url('img/fondo.png');*/
   background-position: center;
-  /* Para dejar la imagen de fondo centrada, vertical y horizontalmente */
-  background-repeat: no-repeat;
-  /* Para que la imagen de fondo no se repita */
-  background-attachment: fixed;
-  /* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
-  background-size: cover;
-  /* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador(RESPONSIVE) */
 }
 
 #container-pokemones {
-  text-align: center;
-}
-
-#container-pokemones .search-Pokemon {
-  border: 4px solid cornflowerblue;
-  border-radius: 4px;
-  padding: 0.5rem 1.5rem;
-  /*estoy poniendo 1.5 de forma horizontal y 0.5 vertical*/
-}
-
-#container-pokemones .search-Pokemon:focus {
-  outline: none;
+  text-align: justify;
 }
 
 #listado-pokemones {
-  /* background-color: aquamarine;*/
-  padding: 2rem;
-  /*espaciado entre el padre y los hijos*/
-  display: grid;
-  /*cuadrícula*/
-  grid-template-columns: 1fr 1fr 1fr;
-  /*para separar en 3 columnas al listado*/
-  gap: 2rem;
-  /*el gap separa los hijos (1 rem=16px)*/
+  display: flex;
+  order: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
 }
 
-#listado-pokemones .pokemon-item {
+.pokemon-item {
   background-color: white;
   border-radius: 10%;
-  padding: 1rem;
+  padding: .5rem;
   text-align: center;
+  position: relative;
 }
 
 .search-Pokemon {
+  width: 220px;
+  height: auto;
   text-align: left;
-  font-family:'Poppins light', sans-serif;
+  font-family: 'Poppins light', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  border-radius: 15px;
+  padding: 0.2rem .1rem;
 }
 
 .search-Pokemon:focus {
   border: 3px solid #F8A4D8;
+  outline: none;
 }
 
 #select-tipos {
+  width: 220px;
+  height: auto;
   text-align: left;
-  font-family:'Poppins light', sans-serif;
+  font-family: 'Poppins light', sans-serif;
+  font-size: 1rem;
+  margin: 0 .5rem 2rem .5rem;
+  padding: .3rem;
+  border-radius: 15px;
+}
+
+#select-tipos:focus {
+  border: 3px solid #F8A4D8;
+  outline: none;
 }
 
 .modal {
   display: none;
   /* Hidden by default */
   background: rgba(0, 0, 0, 0.4);
-  width: 100vw;
-  /* Full width */
-  height: 100vh;
-  /* Full height */
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   position: fixed;
   padding: 20px;
   justify-content: center;
   align-items: center;
-  z-index: 100;
+  z-index: 2;
 }
 
 .modal-container {
-  /* Modal Content */
-  /* background-image: url('img/fondo.png');*/
-
-  background: rgb(238, 174, 202);
   background: linear-gradient(294deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-  max-height: 600px;
-  max-height: 650px;
   width: 90%;
-  height: 95%;
+  height: 60%;
+  font-family: 'Poppins light' sans-serif;
+  font-size: .75rem;
   padding: 20px;
   border-radius: 15px;
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   gap: 20px;
 }
 
@@ -146,7 +140,71 @@ body {
   font-size: 1.3 rem;
   border-radius: 50%;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 5px;
+  top: 5px;
   cursor: pointer;
+}
+
+
+@media only screen and (max-width: 640px) {
+  .logo {
+    max-width: 100%;
+  }
+
+  body {
+    margin: 2rem;
+    padding: 3rem;
+  }
+
+  .modal-container {
+    padding: 30px;
+    font-size: .75rem;
+  }
+}
+
+@media only screen and (max-width: 1080px) and (min-width: 640px) {
+  .logo {
+    max-width: 70%;
+  }
+
+  #listado-pokemones {
+    padding: 0 5rem 5rem 5rem;
+  }
+  
+  .modal-container {
+    width: 65%;
+    font-size: .8rem
+  }
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1080px) {
+  .logo {
+    max-width: 60%;
+    gap: 50px
+  }
+
+  #listado-pokemones {
+    padding: 0 6.5rem 6.5rem 6.5rem;
+  }
+
+  .modal-container {
+    max-width: 65%;
+    font-size: .8rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .logo {
+    max-width: 55%;
+    gap: 50%;
+  }
+
+  #listado-pokemones {
+    padding: 0 6.5rem 6.5rem 6.5rem;
+  }
+  
+  .modal-container {
+    max-width: 50%;
+    font-size: .9rem;
+  }
 }

@@ -1,5 +1,6 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
-import { buscarPorInput, buscarPorTipo } from '../src/data.js';
+import { it } from 'eslint/lib/rule-tester/rule-tester.js';
+import { buscarPorInput, buscarPorTipo, filterPokemonByNumber, ordenarArrayAlfabeticamente } from '../src/data.js';
 
 const pokemonArrayTest = [
   {
@@ -66,6 +67,26 @@ let dragones =
     "type": ["dragon", "flying"]
   }];
 
+  let ninetales038 =
+  {"num": "038",
+  "name": "ninetales",
+  "pokemon-rarity": "normal",
+  "type": ["fire"]
+  };
+
+  /*let pokemonesOrdenados = [
+    {"num": "038",
+    "name": "ninetales",
+    "pokemon-rarity": "normal",
+    "type": ["fire"]
+    },
+    {
+      "num": "025",
+      "name": "pikachu",
+      "pokemon-rarity": "normal",
+      "type": ["electric"]
+    }];*/
+
 //   TEST DEL INPUT BUSCAR POR NOMBRE
 
 describe('buscarPorInput', () => {
@@ -87,6 +108,30 @@ describe('buscarPorTipo', () => {
 
   it('should return "pokemon-item.type=“dragon”" with “dragon”', () => {
     expect(buscarPorTipo('dragon', pokemonArrayTest)).toEqual(dragones);
+  });
+});
+
+
+// TEST DE LA FUNCIÓN FILTRAR POR NÚMERO
+
+describe('filterPokemonByNumber', () => {
+  it('is a function', () => {
+    expect(typeof filterPokemonByNumber).toBe('function');
+  });
+
+  it('con el argumento 038 debe retornar ninetales038', () => {
+    expect (filterPokemonByNumber('038', pokemonArrayTest)).toEqual(ninetales038);
+  });
+});
+
+// TEST SORT
+
+describe('ordenarArrayAlfabeticamente', () => {
+  it('is a function', () => {
+    expect(typeof ordenarArrayAlfabeticamente).toBe('function');
+  });
+  it('should return dragonite first and then dratini', () => {  
+    expect(ordenarArrayAlfabeticamente("resultadoPikachu","ninetales038")).toEqual("ninetales038", "resultadoPikachu");
   });
 });
 
