@@ -66,6 +66,22 @@ body {
   position: relative;
 }
 
+#numberTypeContainer{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+
+}
+
+.numCard {
+  margin: 5px 0 5px 15px;
+}
+
+.typeCard {
+  margin: 5px 15px 5px 0;
+}
+
 .search-Pokemon {
   width: 220px;
   height: auto;

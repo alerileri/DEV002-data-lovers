@@ -59,10 +59,10 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
 
 
     pokemoncitoContainer.innerHTML = `
-      <h3>${poke.name}</h3>
-      <img src="${poke.img}" >
-       <h3>${poke.num}</h3>
-       <p>${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</p>
+     
+    <div id=numberTypeContainer><h3 class="numCard">${poke.num} </h3> <h3 class="typeCard">${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</h3></div>
+    <img src="${poke.img}" >
+    <h3>${poke.name}</h3>
    `;
 
     pokemoncitoContainer.addEventListener("click", () => visualizarModalPokemon(poke.num))
