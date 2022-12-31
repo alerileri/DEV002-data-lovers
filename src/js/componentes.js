@@ -4,6 +4,7 @@ import { filterPokemonByNumber, ordenarArrayAlfabeticamente } from "../data.js";
 
 const modalAdd = document.querySelector("#modalAdd");
 
+//Constante para asignar un icon a los diferentes tipos
 const iconType = {
   bug: '<i class="fa-solid fa-bug" style="color: seagreen"></i>',
   dark: '<i class="fa-solid fa-skull style="color: dimgray"></i>',
@@ -23,7 +24,7 @@ const iconType = {
   rock: '<i class="fa-solid fa-gem" style="color: lightsteelblue"></i>',
   steel: '<i class="fa-solid fa-shield" style="color: darkgray"></i>',
   water: '<i class="fa-solid fa-droplet" style="color: aqua"></i>',
-  
+
 }
 
 export const visualizarPokemones = (arrayPokemones) => {    //esta función limpia al padre(listado-pokemones) y renderiza los componentes hijos(pokemon-item)
@@ -31,16 +32,16 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
   listadoPokemones.innerHTML = ''; //limpia el componente padre
 
 
-  const numeroResultados=document.getElementById('numeroResultados')
-  const porcentajeResultados=document.getElementById('porcentajeResultados')
+  const numeroResultados = document.getElementById('numeroResultados')
+  const porcentajeResultados = document.getElementById('porcentajeResultados')
   numeroResultados.innerHTML = `total pokemones: ${arrayPokemones.length}`;
-  porcentajeResultados.innerHTML=`porcentaje pokemones encontrados: ${Math.round(arrayPokemones.length*100/251)} %`;
+  porcentajeResultados.innerHTML = `porcentaje pokemones encontrados: ${Math.round(arrayPokemones.length * 100 / 251)} %`;
 
 
 
   const htmlContainerPokemon = arrayPokemones.map(poke => {
     //incrustando la tarjeta pokemon--item con javaScript a html usando InnerHTML
-   
+
     const pokemoncitoContainer = document.createElement("div")
     //para crear un div
 
@@ -68,8 +69,8 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
     pokemoncitoContainer.addEventListener("click", () => visualizarModalPokemon(poke.num))
     return pokemoncitoContainer
   });
- /*listadoPokemones.innerHTML = htmlContainerPokemones variable que incrusta el listado de pokemones*/
- listadoPokemones.append(...htmlContainerPokemon) /*Operador spread son los ... y funciona para "esparcir" el array sin tener que escribir cada uno de sus elementos*/
+  /*listadoPokemones.innerHTML = htmlContainerPokemones variable que incrusta el listado de pokemones*/
+  listadoPokemones.append(...htmlContainerPokemon) /*Operador spread son los ... y funciona para "esparcir" el array sin tener que escribir cada uno de sus elementos*/
 };// el método append le está agregando a listadoPokemones elementos hijos, que 
 //son todos los elementos del array de htmlContainerPokemon
 
@@ -85,21 +86,22 @@ export function visualizarModalPokemon(numerito) {
   const [pokemon] = filterPokemonByNumber(numerito, pokemones);
 
   const type = pokemon.type;
-    const iconTypsito1 = iconType[type[0]];
-    const iconTypsito2 = iconType[type[1]];
+  const iconTypsito1 = iconType[type[0]];
+  const iconTypsito2 = iconType[type[1]];
 
   openModal()
 
 
   const itemPokemon = document.getElementById('modalContainerPokemon');
+ 
+ //Función Contenido de la ventana modal
   const modalPokemon = `
   <div class="informacion-pokemon" id="modal-pokemon">
-    <h3 class="nombrePokemon"> ${pokemon.name} </h3>
-    <h3>${pokemon.num} </h3>
-    <img  src="${pokemon.img}" >
-    <h3>About: ${pokemon.about}</h3>
-    <h3>Type: ${pokemon.type} </h3>
-    <p>${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</p>
+   <h1 id="nombreModal"> ${pokemon.name} </h3>
+   <img  src="${pokemon.img}" >
+   <h3>${pokemon.num} </h3>  <p>${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</p> 
+   <h3>Type: ${pokemon.type} </h3>
+   <h3 id="aboutModal">About: ${pokemon.about}</h3>
 
     <h2 class="subCategoriesModal">MODO COMBATE</h2>
     <h3 class="subCategoriesModal">Fortalezas:${pokemon.resistant} </h3>
@@ -110,7 +112,7 @@ export function visualizarModalPokemon(numerito) {
   itemPokemon.innerHTML = modalPokemon;
 }
 
-export function ordenarPokemonesPorNombre () {
-  let pokemonesOrdenados = pokemones.sort (ordenarArrayAlfabeticamente);
+export function ordenarPokemonesPorNombre() {
+  let pokemonesOrdenados = pokemones.sort(ordenarArrayAlfabeticamente);
   visualizarPokemones(pokemonesOrdenados);
 }

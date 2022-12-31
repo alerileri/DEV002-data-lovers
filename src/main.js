@@ -7,10 +7,10 @@
  import data from "../data/pokemon/pokemon.js"
  
  const pokemones = data.pokemon;
- //llamando a la funcion visualizarPokemones para mostrar todos los pokemones por defecto en mi página principal
+ //Llamado a la función visualizarPokemones para mostrar todas las cards por defecto en la página principal
  visualizarPokemones(pokemones);
  
- //funcion cerrar modal al hacer clic en el botón cerrar del modal
+ //Función cerrar modal al hacer clic en el botón cerrar del modal
  const closeModalPokemon = document.getElementById('botonCloseModal')
  closeModalPokemon.addEventListener('click', closeModal)
  
