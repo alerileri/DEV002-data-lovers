@@ -92,10 +92,10 @@ let y =
 };
 
 let articuno =
-{ "num": "144",
+[{ "num": "144",
   "name": "articuno",
   "pokemon-rarity": "legendary",
-  "type": ["ice", "flying"]}
+  "type": ["ice", "flying"]}]
 
   /*let pokemonesOrdenados = [
     {"num": "038",
