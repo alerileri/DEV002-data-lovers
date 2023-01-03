@@ -1,6 +1,6 @@
 //para las pruebas unitarias de las funciones implementadas en el archivo data.js.
 import { it } from 'eslint/lib/rule-tester/rule-tester.js';
-import { buscarPorInput, buscarPorTipo, filterPokemonByNumber, ordenarArrayAlfabeticamente } from '../src/data.js';
+import { buscarPorInput, buscarPorTipo, filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarMayorAMenor, ordenarArrayZA, buscarPorRarity } from '../src/data.js';
 
 const pokemonArrayTest = [
   {
@@ -68,11 +68,34 @@ let dragones =
   }];
 
   let ninetales038 =
-  {"num": "038",
+  [{"num": "038",
   "name": "ninetales",
   "pokemon-rarity": "normal",
   "type": ["fire"]
-  };
+  }];
+
+  let x = 
+{
+"num": "149",
+"name": "dragonite",
+"pokemon-rarity": "normal",
+"type": ["dragon", "flying"],
+"spawn-chance": "0.02"
+};
+
+let y = 
+{ "num": "147",
+"name": "dratini",
+"pokemon-rarity": "normal",
+"type": ["dragon"],
+"spawn-chance": "0.3"
+};
+
+let articuno =
+{ "num": "144",
+  "name": "articuno",
+  "pokemon-rarity": "legendary",
+  "type": ["ice", "flying"]}
 
   /*let pokemonesOrdenados = [
     {"num": "038",
@@ -130,14 +153,46 @@ describe('ordenarArrayAlfabeticamente', () => {
   it('is a function', () => {
     expect(typeof ordenarArrayAlfabeticamente).toBe('function');
   });
-  it('should return dragonite first and then dratini', () => {  
-    expect(ordenarArrayAlfabeticamente("resultadoPikachu","ninetales038")).toEqual("ninetales038", "resultadoPikachu");
+  it('should return 0 al usar dos pokemones iguales', () => {  
+    expect(ordenarArrayAlfabeticamente(resultadoPikachu,resultadoPikachu)).toEqual(0);
   });
 });
 
-// TEST REVERSE
-describe('ordenarArrayZA', () => {
+//TEST REVERSE
+it('should return 0 al usar dos pokemones iguales', () => {  
+  expect(ordenarArrayZA(resultadoPikachu,resultadoPikachu)).toEqual(0);
+});
+
+
+
+//TEST RARITY
+// describe('buscarPorRarity', () => {
+//   it('is a function', () => {
+//     expect(typeof buscarPorRarity).toBe('function');
+//   });
+// });
+it('should return articuno albuscar legendary en el array', () => {  
+  expect(buscarPorRarity('legendary', pokemonArrayTest)).toEqual(articuno);
+});
+
+// TEST FILTER POKEMON BY NUMBER
+describe('filterPokemonByNumber', () => {
   it('is a function', () => {
-    expect(typeof ordenarArrayZA).toBe('function');
+    expect(typeof buscarPorTipo).toBe('function');
+  });
+
+  it('should return ninetales038 with “038” ', () => {  
+    expect(filterPokemonByNumber("038",pokemonArrayTest)).toEqual(ninetales038);
+  });
+});
+
+//    TEST ORDENAR DE MAYOR A MENOR por spawn-chance
+
+describe('ordenarMayorAMenor', () => {
+  it('is a function', () => {
+    expect(typeof ordenarMayorAMenor).toBe('function');
+  });
+  it('should return diference betwen dratini y dragonite spawn-chances', () => {  
+    expect(ordenarMayorAMenor(x,y)).toEqual(0.27999999999999997);
   });
 });
