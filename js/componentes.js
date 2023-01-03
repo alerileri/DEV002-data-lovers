@@ -1,9 +1,8 @@
-import data from "https://alerileri.github.io/DEV002-data-lovers/data/pokemon/pokemon.js"
-
+import data from "../data/pokemon/pokemon.js"
 
 const pokemones = data.pokemon;
-import { filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarArrayZA } from "../data.js";
-//RECORDATORIO: Volver a importar ordenarMayorAMenor
+import { filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarArrayZA, ordenarMayorAMenor} from "../data.js";
+
 const modalAdd = document.querySelector("#modalAdd");
 //const modalGrafica = document.querySelector('#modalGrafica');
 
@@ -84,12 +83,12 @@ export const closeModal = () => {
 }
 
 //Función abrir y cerrar modal gráfica
-// const openModalGrafica = () => {
-//   modalGrafica.style.display = 'flex';
-// }
-// export const closeModalGrafica = () => {
-//   modalGrafica.style.display = 'none';
-// }
+const openModalGrafica = () => {
+  modalGrafica.style.display = 'flex';
+}
+export const closeModalGrafica = () => {
+  modalGrafica.style.display = 'none';
+}
 
 
 export function visualizarModalPokemon(numerito) {
@@ -140,62 +139,61 @@ export function ordenarPokemonesZA() {
 //   visualizarPokemones(filtroLegendarios);
 // }
 
+//INFORMACIÓN DE LA MODAL GRÁFICA
 
-// INFORMACIÓN DE LA MODAL GRÁFICA
+const dataGrafica = () => {
+  let pokemonesAordenar = pokemones.filter(pokemones => parseFloat(pokemones['spawn-chance']) > 0);//convierte en flotantes los string (spawnchance de los pokemones)
+  pokemonesAordenar = pokemonesAordenar.map(pokemon => ({
+    name: pokemon.name,
+    'spawn-chance': parseFloat(pokemon['spawn-chance'])   //spawn-chance va entre comillas simples porque contiene caracteres especiales
 
-// const dataGrafica = () => {
-//   let pokemonesAordenar = pokemones.filter(pokemones => parseFloat(pokemones['spawn-chance']) > 0);//convierte en flotantes los string (spawnchance de los pokemones)
-//   pokemonesAordenar = pokemonesAordenar.map(pokemon => ({
-//     name: pokemon.name,
-//     'spawn-chance': parseFloat(pokemon['spawn-chance'])   //spawn-chance va entre comillas simples porque contiene caracteres especiales
+  })).sort(ordenarMayorAMenor)
 
-//   })).sort(ordenarMayorAMenor)
+  pokemonesAordenar = pokemonesAordenar.slice(0, 10);
+  //console.log(pokemonesAordenar);
 
-//   pokemonesAordenar = pokemonesAordenar.slice(0, 10);
-//   //console.log(pokemonesAordenar);
-
-//   //desde aquí es la gráfica
-//   const $grafica = document.querySelector("#graficaPokemon"); //selecciona el id de una etiqueta para insertar la gráfica
-//   // Las etiquetas son las que van en el eje X.
-//   const etiquetas = pokemonesAordenar.map(pokemon => pokemon.name); /*(nombre de los 10 pokemones)*/
-//   // Podemos tener varios conjuntos de datos. Comencemos con uno
-//   const datospokemones = {
-//     label: "Spawn chances",
-//     data: pokemonesAordenar.map(pokemon => pokemon['spawn-chance']), // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
-//     backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
-//     borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
-//     borderWidth: 1,// Ancho del borde
- // };
-//   new Chart($grafica, {
-//     type: 'bar',// Tipo de gráfica
-//     data: {
-//       labels: etiquetas,
-//       datasets: [
-//         datospokemones,
-//         // Aquí más datos...
-//       ]
-//     },
-//     options: {
-//       scales: {
-//         yAxes: [{
-//           ticks: {
-//             beginAtZero: true
-//           }
-//         }],
-//       },
-//     }
-//   });
-// };
+  //desde aquí es la gráfica
+  const $grafica = document.querySelector("#graficaPokemon"); //selecciona el id de una etiqueta para insertar la gráfica
+  // Las etiquetas son las que van en el eje X.
+  const etiquetas = pokemonesAordenar.map(pokemon => pokemon.name); /*(nombre de los 10 pokemones)*/
+  // Podemos tener varios conjuntos de datos. Comencemos con uno
+  const datospokemones = {
+    label: "Spawn chances",
+    data: pokemonesAordenar.map(pokemon => pokemon['spawn-chance']), // La data es un arreglo que debe tener la misma cantidad de valores que la cantidad de etiquetas
+    backgroundColor: 'rgba(54, 162, 235, 0.2)', // Color de fondo
+    borderColor: 'rgba(54, 162, 235, 1)', // Color del borde
+    borderWidth: 1,// Ancho del borde
+ };
+  new Chart($grafica, {
+    type: 'bar',// Tipo de gráfica
+    data: {
+      labels: etiquetas,
+      datasets: [
+        datospokemones,
+        // Aquí más datos...
+      ]
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAtZero: true
+          }
+        }],
+      },
+    }
+  });
+};
 
 
-// export function visualizarModalGrafica() {
-//   openModalGrafica()
-//   const graficaPokemon = document.getElementById('information-grafic');
-//   const modalGraficaPokemon = ` 
-//   <canvas id="graficaPokemon"></canvas>
-//   `;
-//   graficaPokemon.innerHTML = modalGraficaPokemon;
-//   dataGrafica(); //contruye la gráfica a travez del id("grafica")
+export function visualizarModalGrafica() {
+  openModalGrafica()
+  const graficaPokemon = document.getElementById('information-grafic');
+  const modalGraficaPokemon = ` 
+  <canvas id="graficaPokemon"></canvas>
+  `;
+  graficaPokemon.innerHTML = modalGraficaPokemon;
+  dataGrafica(); //contruye la gráfica a travez del id("grafica")
 
-// } 
+} 
 

@@ -22,9 +22,9 @@
   </header>
 
 
-<!--// INPUT BUSCAR POR NOMBRE-->
-  <input type="text" class="search-Pokemon" id="searchName" placeholder="Nombre del pokemon" rows="1" cols="40" maxlenght="40" 
-    autocomplete="off">
+  <!--// INPUT BUSCAR POR NOMBRE-->
+  <input type="text" class="search-Pokemon" id="searchName" placeholder="Nombre del pokemon" rows="1" cols="40"
+    maxlenght="40" autocomplete="off">
   <h2></h2>
 
 
@@ -51,31 +51,31 @@
     <option value="water">Water</option>
   </select>
 
- 
-<button type="button" id="botonGrafica">Top spawn</button>
-<!--// BOTONES-->
-<section id="buttonsZone">
-  
-  <button type="button" id="botonSort">A-Z</button>
-  <!-- debo crear el evento change con el id de mi selector 
+
+  <button type="button" id="botonGrafica">Top spawn</button>
+  <!--// BOTONES-->
+  <section id="buttonsZone">
+
+    <button type="button" id="botonSort">A-Z</button>
+    <!-- debo crear el evento change con el id de mi selector 
     y debo filtrar por el tipo y renderizar con la función (visualizarPokemones)  -->
-  <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
-  <button type="button" id="botonZA">Z-A</button>
+    <!-- para la función buscarPorInput activarla cuando el texto que voy a buscar tenga mas de dos letras. Cuando no encuentre ningun pokemon que me muetre un mensaje de que no se encontró ningun pokémon -->
+    <button type="button" id="botonZA">Z-A</button>
 
-  <!--// SELECTOR PARA BUSCAR POKEMON POR RARITY-->
- <select name="rarity" id="select-rarity">
-    <option value="" disabled selected>Rarity</option>
-    <option value="normal">Normal</option>
-    <option value="legendary">Legendary</option>
-  </select> 
-</section>
+    <!--// SELECTOR PARA BUSCAR POKEMON POR RARITY-->
+    <select name="rarity" id="select-rarity">
+      <option value="" disabled selected>Rarity</option>
+      <option value="normal">Normal</option>
+      <option value="legendary">Legendary</option>
+    </select>
+  </section>
 
 
-<!--// ZONA DE LOS CÁLCULOS-->
+  <!--// ZONA DE LOS CÁLCULOS-->
   <section id="calculos">
-  <div id="numeroResultados">pokemones</div>
-  <div id="porcentajeResultados">pokemones</div>
-</section>
+    <div id="numeroResultados">pokemones</div>
+    <div id="porcentajeResultados">pokemones</div>
+  </section>
 
   <!--// CONTENEDOR DONDE SE MUESTRAN TODAS LAS TARJETAS-->
   <div id="container-pokemones">
@@ -93,15 +93,15 @@
     </div>
   </div>
 
-<!--// VENTANA MODAL GRÁFICA-->
-<div class="modal" id="modalGrafica">
-  <div class="modal-container" id="modalContainerGrafica">
-    <div class="close-modal" id="botonCloseModalGrafica"><i class="fa-solid fa-circle-xmark"></i></div>
-    <div id="information-grafic"></div>
+  <!--// VENTANA MODAL GRÁFICA-->
+  <div class="modal" id="modalGrafica">
+    <div class="modal-container" id="modalContainerGrafica">
+      <div class="close-modal" id="botonCloseModalGrafica"><i class="fa-solid fa-circle-xmark"></i></div>
+      <div id="information-grafic"></div>
 
-    <!--aquí insertaré el gráfico con la etiqueta canvas desde componentes.js -->
+      <!--aquí insertaré el gráfico con la etiqueta canvas desde componentes.js -->
+    </div>
   </div>
-</div>
 
 
   <div id="root"></div>

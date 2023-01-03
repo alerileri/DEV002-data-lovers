@@ -3,7 +3,7 @@
 
  //IMPORTACIÓN DE MÓDULOS
  import { buscarPorInput, buscarPorRarity, buscarPorTipo } from './data.js';
- import { visualizarPokemones,closeModal, ordenarPokemonesPorNombre, ordenarPokemonesZA, visualizarModalGrafica, closeModalGrafica } from './js/componentes.js';
+ import { visualizarPokemones,closeModal, closeModalGrafica, ordenarPokemonesPorNombre, ordenarPokemonesZA, visualizarModalGrafica } from './js/componentes.js';
  import data from "../data/pokemon/pokemon.js"
  
  const pokemones = data.pokemon;
@@ -12,11 +12,11 @@
  
  //Función cerrar modal pokemon al hacer clic en el botón cerrar 
  const closeModalPokemon = document.getElementById('botonCloseModal')
- closeModalPokemon.addEventListener('click', closeModal)
+closeModalPokemon.addEventListener('click', closeModal)
 
  //funcion cerrar modal de gráfica al hacer clic en el boton
-const closeModalPokemonGrafica = document.getElementById('botonCloseModalGrafica')
-closeModalPokemonGrafica.addEventListener('click', closeModalGrafica)
+ const closeModalPokemonGrafica = document.getElementById('botonCloseModalGrafica')
+ closeModalPokemonGrafica.addEventListener('click', closeModalGrafica)
  
  //funcion buscar por input de texto de nombre del pokemon
  const inputSearch = document.getElementById('searchName')
