@@ -21,6 +21,10 @@ export const buscarPorTipo = (e, data) => {
   return data.filter(pokemon => pokemon.type.includes(e));
 };
 
+export const buscarPorRarity = (e, data) => {
+  return data.filter(pokemon => pokemon["pokemon-rarity"].includes(e));
+};
+
 //  export const buscarLegendarios = (e, data) => {
 //   return data.filter(pokemon => pokemon.pokemon-rarity.includes(e));
 //  };
@@ -33,26 +37,23 @@ export const buscarPorTipo = (e, data) => {
 
 export const filterPokemonByNumber = (numPokemon, data) => {
   return data.filter(pokemon => pokemon.num == numPokemon);
-};
+}
 
 export function ordenarArrayAlfabeticamente (x, y) {
   if (x.name<y.name) {return -1;}
   if (x.name>y.name) {return 1;}
   return 0;
-};
+}
 
 export function ordenarArrayZA (x, y) {
   if (x.name<y.name) {return 1;}
   if (x.name>y.name) {return -1;}
   return 0;
-};
+}
 
 // export const pokemonLegendarios = pokemones.filter(e => e.rarity legendary);
 
-// //Función para ordenar de manera ascendente 
-// export const sortUpward = (array, sortBy) => array.sort(function (a, b) {
-//   return a[sortBy] < b[sortBy] ? -1 : 0;
-  
-// FUNCIÓN z-a
-// export const sortDownward = (array, sortBy) => array.sort(function (a, b) {
-//   return a[sortBy] > b[sortBy] ? -1 : 0;
+
+export function ordenarMayorAMenor(x, y) {
+  return parseFloat(y['spawn-chance']) - parseFloat(x['spawn-chance']);
+}

@@ -116,16 +116,51 @@ i {
   width: 220px;
   height: auto;
   text-align: left;
+  align-items: center;
   font-family: 'Poppins light', sans-serif;
   font-size: 1rem;
-  margin: 0 .5rem 2rem .5rem;
-  padding: .3rem;
+  margin: 0;
+  padding: 0;
   border-radius: 15px;
 }
 
 #select-tipos:focus {
   border: 3px solid #F8A4D8;
   outline: none;
+}
+
+#buttonsZone{
+  display: flex;
+  order: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center; 
+  background-color: #fff;
+}
+
+#botonSort{
+  font-family: 'Poppins light', sans-serif;
+  width: 20%;
+  height: auto;
+  background-color: #fff;
+}
+
+#botonZA{
+  font-family: 'Poppins light', sans-serif;
+  width: 20%;
+  height: auto;
+  background-color: #fff;
+}
+
+#select-rarity{
+  font-family: 'Poppins light', sans-serif;
+}
+
+#calculos{
+  margin: 0 .5rem .3rem .5rem;
+  padding: 1rem;
 }
 
 .modal {
@@ -177,11 +212,47 @@ i {
   color: red;
   font-size: 3rem;
   border-radius: 50%;
-  position: absolute;
-  right: 230px;
-  top: 110px;
+  position: fixed;
+  right: 10%;
+  top: 15%;
   cursor: pointer;
   z-index: 5;
+}
+
+.container-grafico {
+  width: 100%;
+  /* porcentaje del contenedor padre */
+  height: 100%;
+  /* porcentaje de la pantalla*/
+  margin: 4rem auto;
+  padding: 4rem !important;
+}
+
+.container-grafico canvas {
+  width: 100% !important;
+  /* porcentaje del contenedor padre */
+  height: 100% !important;
+  /* porcentaje de la pantalla*/
+}
+
+#botonGrafica {
+  width: 220px;
+  height: auto;
+  align-items: center;
+  padding: 0 0 0 0;
+  text-align: left;
+  font-family: 'Poppins light', sans-serif;
+  font-size: 1rem;
+  border-radius: 15px;
+  background-color: #fff;
+} 
+
+#information-grafic{
+  width:100%;
+  height: 100%;
+}
+#botonGrafica{
+  margin-left: 1rem;
 }
 
 

@@ -135,4 +135,9 @@ describe('ordenarArrayAlfabeticamente', () => {
   });
 });
 
-
+// TEST REVERSE
+describe('ordenarArrayZA', () => {
+  it('is a function', () => {
+    expect(typeof ordenarArrayZA).toBe('function');
+  });
+});
