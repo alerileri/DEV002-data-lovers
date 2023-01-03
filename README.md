@@ -1,6 +1,5 @@
 # Definición del producto
 
-Documenta brevemente tu trabajo en el archivo README.md de tu repositorio, contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve el problema (o problemas) que tiene tu usuario.
 Pokémon GO es un video juego de realidad aumentada para teléfonos móviles badado en la saga Pokémon. Las jugadoras y jugadores son entrenadores cuyo objetivo es capturar pokémon para usos distintos: coleccionarlos, usarlos para enfrentarse al Team Go Rocket, batallar en torneos y copas, obtener desafíos de colección, obtener caramelos para evolución o energía para megaevolución, etc.
 Jhoale Pokédex es una web que contiene información sobre los pokémon de las regiones de Kanto y Jhoto dentro del juego Pokémon Go, información que filtra con diferentes funciones de manera que sea útil, identificable y digerible para las jugadoras y jugadores. Los filtros fueron diseñados para que usuarias y usuarios puedan tomar mejores decisiones en el juego, lo que les permitirá subir de nivel y conseguir diferentes objetivos mientras se divierten en el mundo real.
 Para ello, concluimos la necesidad de integrar los siguientes filtros básicos:
@@ -12,16 +11,16 @@ Pokémon GO es un video juego de realidad aumentada para teléfonos móviles bad
 Jhoale Pokédex es una web que contiene información sobre los pokémon de las regiones de Kanto y Jhoto dentro del juego Pokémon Go, información que filtra con diferentes funciones de manera que sea útil, identificable y digerible para las jugadoras y jugadores. Los filtros fueron diseñados para que usuarias y usuarios puedan tomar mejores decisiones en el juego, lo que les permitirá subir de nivel y conseguir diferentes objetivos mientras se divierten en el mundo real.
 Para ello, concluimos la necesidad de integrar los siguientes filtros básicos:
 * Filtro por nombre de pokémon
-* Filtro por tipos
+* Filtro por tipo de pokémon
 * Filtro de pokémon legendarios
+Además, implementamos funciones que permiten al usuario ordenar la data por orden alfabético y alfabético inverso según los nombres de los pokémon.
 
 El uso de ellos se definió más ampliamente en las historias de usuario.
 
 
 ## Historias de usuario
 
-Como parte del proceso de UI realizamos las siguientes historias de usuario para Jhoale Pokédex, las cuales nos ayudaron a clarificar cómo resolveríamos las necesidades de nuestros usuarios en la web.
-Como parte del proceso de UI realizamos las siguientes historias de usuario para Jhoale Pokédex, las cuales nos ayudaron a clarificar cómo resolveríamos las necesidades de nuestros usuarios en la web.
+Como parte del proceso de diseño UX/UI realizamos las siguientes historias de usuario para Jhoale Pokédex, las cuales nos ayudaron a clarificar cómo resolveríamos las necesidades de nuestros usuarios en la web.
 
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU001.jpeg)
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/PGPokedexHU005.jpeg)
@@ -50,8 +49,8 @@ A partir de estos bocetos solicitamos feedback a compañeras y coaches, con lo q
 
 ![Image text](https://github.com/alerileri/DEV002-data-lovers/blob/main/src/img/prot-bn-dig.png)
 
+https://miro.com/app/board/uXjVPB82E2Q=/ 
 
-- **Prototipo de alta fidelidad** 
 - **Prototipo de alta fidelidad** 
 
 Después de iterar nuestro prototipo de baja calidad en diferentes formatos, dimos el siguiente paso y definimos un diseño de alta fidelidad en figma. El resultado fue el que se muestra en las siguientes imágenes:
@@ -67,4 +66,17 @@ El resultado final del proyecto es una página desplegada en github pages, a la 
 
 
 ## Testeos de usabilidad
+
+Este proyecto incluye un archivo spect que evalúa la efectividad de las funciones incluidas en el archivo data.js, mismas que se exportan a main.js para ser utilizadas ahí. 
+
+Testeamos las siguientes funciones:
+* input buscar por nombre
+* selector buscar por tipo
+* filtro por número
+* orden alfabético
+*orden alfabético inverso
+* Selector rarity
+* Filtro por número
+
+La creación de los test nos permitió detectar errores, entender mejor qué es lo que hacían nuestras funciones e incluso algo tan básico como definir si eran o no funciones. 
 
