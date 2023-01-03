@@ -1,6 +1,6 @@
 import data from "../data/pokemon/pokemon.js"
 const pokemones = data.pokemon;
-import { filterPokemonByNumber, ordenarArrayAlfabeticamente } from "../data.js";
+import { filterPokemonByNumber, ordenarArrayAlfabeticamente, ordenarArrayZA } from "../data.js";
 
 const modalAdd = document.querySelector("#modalAdd");
 
@@ -24,18 +24,19 @@ const iconType = {
   rock: '<i class="fa-solid fa-gem" style="color: lightsteelblue"></i>',
   steel: '<i class="fa-solid fa-shield" style="color: darkgray"></i>',
   water: '<i class="fa-solid fa-droplet" style="color: aqua"></i>',
+};
 
-}
-
+//Función que muestra las tarjetas en la página principal
 export const visualizarPokemones = (arrayPokemones) => {    //esta función limpia al padre(listado-pokemones) y renderiza los componentes hijos(pokemon-item)
   const listadoPokemones = document.getElementById('listado-pokemones')
   listadoPokemones.innerHTML = ''; //limpia el componente padre
 
 
+  //Función de los cálculos
   const numeroResultados = document.getElementById('numeroResultados')
   const porcentajeResultados = document.getElementById('porcentajeResultados')
-  numeroResultados.innerHTML = `total pokemones: ${arrayPokemones.length}`;
-  porcentajeResultados.innerHTML = `porcentaje pokemones encontrados: ${Math.round(arrayPokemones.length * 100 / 251)} %`;
+  numeroResultados.innerHTML = `Total: ${arrayPokemones.length} pokémon`;
+  porcentajeResultados.innerHTML = `Porcentaje: ${Math.round(arrayPokemones.length * 100 / 251)} % del total`;
 
 
 
@@ -61,7 +62,7 @@ export const visualizarPokemones = (arrayPokemones) => {    //esta función limp
 
     pokemoncitoContainer.innerHTML = `
      
-    <div id=numberTypeContainer><h3 class="numCard">${poke.num} </h3> <h3 class="typeCard">${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</h3></div>
+    <div id="numberTypeContainer"><h3 class="numCard">${poke.num} </h3> <h3 class="typeCard">${iconTypsito1} ${iconTypsito2 ? iconTypsito2 : ""}</h3></div>
     <img src="${poke.img}" >
     <h3>${poke.name}</h3>
    `;
@@ -85,16 +86,17 @@ export const closeModal = () => {
 export function visualizarModalPokemon(numerito) {
   const [pokemon] = filterPokemonByNumber(numerito, pokemones);
 
-  const type = pokemon.type;
-  const iconTypsito1 = iconType[type[0]];
-  const iconTypsito2 = iconType[type[1]];
+
+const type = pokemon.type;
+const iconTypsito1 = iconType[type[0]];
+const iconTypsito2 = iconType[type[1]];
 
   openModal()
 
 
   const itemPokemon = document.getElementById('modalContainerPokemon');
  
- //Función Contenido de la ventana modal
+ //Función insertar contenido en la ventana modal
   const modalPokemon = `
   <div class="informacion-pokemon" id="modal-pokemon">
    <h1 id="nombreModal"> ${pokemon.name} </h3>
@@ -112,7 +114,45 @@ export function visualizarModalPokemon(numerito) {
   itemPokemon.innerHTML = modalPokemon;
 }
 
+//Función orden alfabético A-Z
 export function ordenarPokemonesPorNombre() {
   let pokemonesOrdenados = pokemones.sort(ordenarArrayAlfabeticamente);
   visualizarPokemones(pokemonesOrdenados);
 }
+
+//Función orden alfabético Z-A
+export function ordenarPokemonesZA() {
+  let pokemonesZA = pokemones.reverse(ordenarArrayZA);
+  visualizarPokemones(pokemonesZA);
+}
+
+// //Función filtrar legendarios
+// export function filtrarLegendarios() {
+//   let filtroLegendarios = pokemones.filter(pokemonLegendarios);
+//   visualizarPokemones(filtroLegendarios);
+// }
+
+// //Crear función que ordenen ascendentemente por número
+// function numberUpward(pokemon) {
+//   buttonUpNumber.addEventListener("click", () => {
+//       const newArray = sortUpward(pokemon, "num");
+//       // console.log(newArray);
+//       container.innerHTML = "";
+//       newArray.forEach(element => {
+//           createCard(element);
+//       })
+//   })
+// }
+
+
+// //Crear función que ordenen descendentemente por número
+// function numberDownward(pokemon) {
+//   buttonDownNumber.addEventListener("click", () => {
+//       const newArray = sortDownward(pokemon, "num");
+//       // console.log(newArray);
+//       container.innerHTML = "";
+//       newArray.forEach(element => {
+//           createCard(element);
+//       })
+//   })
+// }
