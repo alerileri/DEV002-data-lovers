@@ -4,7 +4,7 @@
  //IMPORTACIÓN DE MÓDULOS
  import { buscarPorInput, buscarPorRarity, buscarPorTipo } from './data.js';
  import { visualizarPokemones,closeModal, closeModalGrafica, ordenarPokemonesPorNombre, ordenarPokemonesZA, visualizarModalGrafica } from './js/componentes.js';
- import data from "../data/pokemon/pokemon.js"
+ import data from "./data/pokemon/pokemon.js"
  
  const pokemones = data.pokemon;
  //Llamado a la función visualizarPokemones para mostrar todas las cards por defecto en la página principal
