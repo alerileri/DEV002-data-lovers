@@ -134,10 +134,10 @@ i {
   order: 1;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   align-content: center; 
-  background-color: #fff;
+  
 }
 
 #botonSort{
@@ -145,6 +145,7 @@ i {
   width: 20%;
   height: auto;
   background-color: #fff;
+  border-radius: 10px;
 }
 
 #botonZA{
@@ -152,10 +153,13 @@ i {
   width: 20%;
   height: auto;
   background-color: #fff;
+  border-radius: 10px;
 }
 
 #select-rarity{
   font-family: 'Poppins light', sans-serif;
+  text-align: center;
+  border-radius: 10px;
 }
 
 #calculos{
@@ -282,6 +286,19 @@ i {
     max-width: 70%;
   }
 
+  #botonsort{
+    width: 10%;
+  }
+
+  #botonZA{
+    width: 10%;
+  }
+
+  #select-rarity{
+    width: 12%;
+    height: auto;
+  }
+
   #listado-pokemones {
     padding: 0 5rem 5rem 5rem;
   }
@@ -295,12 +312,32 @@ i {
     width: 160px;
     height: auto;
   }
+
+  .close-modal {
+    position: fixed;
+    right: 18%;
+    top: 15%;
+  }
 }
 
 @media only screen and (max-width: 1920px) and (min-width: 1080px) {
   .logo {
     max-width: 60%;
     gap: 50px
+  }
+
+  #botonsort{
+    width: 10%;
+    height: auto;
+  }
+
+  #botonZA{
+    width: 10%;
+  }
+
+  #select-rarity{
+    width: 12%;
+    height: auto;
   }
 
   #listado-pokemones {
@@ -316,6 +353,12 @@ i {
     width: 160px;
     height: auto;
   }
+
+  .close-modal {
+    position: fixed;
+    right: 19%;
+    top: 15%;
+  }
 }
 
 @media only screen and (min-width: 1920px) {
@@ -328,6 +371,20 @@ i {
     padding: 0 6.5rem 6.5rem 6.5rem;
   }
   
+  #botonsort{
+    width: 12%;
+    height: auto;
+  }
+
+  #botonZA{
+    width: 12%;
+  }
+
+  #select-rarity{
+    width: 15%;
+    height: auto;
+  }
+
   .modal-container {
     max-width: 50%;
     font-size: .9rem;
@@ -336,5 +393,11 @@ i {
   .pokemon-item {
     width: 160px;
     height: auto;
+  }
+
+  .close-modal {
+    position: fixed;
+    right: 25%;
+    top: 15%;
   }
 }
