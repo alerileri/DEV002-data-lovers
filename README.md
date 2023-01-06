@@ -63,20 +63,3 @@ La herramienta principal que utilizamos fue figma, y el prototipo completo puede
 https://www.figma.com/file/gFOaVYvgKHxAPs0h0FPdc3/Prototipo-de-Alta-calidad-Data-Lovers-Ale-y-Jhoa?node-id=0%3A1
 
 El resultado final del proyecto es una página desplegada en github pages, a la que puedes acceder desde este link: https://alerileri.github.io/DEV002-data-lovers/
-
-
-## Testeos de usabilidad
-
-Este proyecto incluye un archivo spect que evalúa la efectividad de las funciones incluidas en el archivo data.js, mismas que se exportan a main.js para ser utilizadas ahí. 
-
-Testeamos las siguientes funciones:
-* input buscar por nombre
-* selector buscar por tipo
-* filtro por número
-* orden alfabético
-*orden alfabético inverso
-* Selector rarity
-* Filtro por número
-
-La creación de los test nos permitió detectar errores, entender mejor qué es lo que hacían nuestras funciones e incluso algo tan básico como definir si eran o no funciones. 
-
